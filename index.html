@@ -651,8 +651,8 @@ async function startCamera(deviceId = null) {
     const constraints = {
         audio: false,
         video: deviceId ? 
-            { deviceId: { exact: deviceId }, width: { ideal: 1920 }, height: { ideal: 1080 }, frameRate: { ideal: 120, min: 40 } } : 
-            { facingMode: "environment", width: { ideal: 1920 }, height: { ideal: 1080 }, frameRate: { ideal: 120, min: 40 } }
+            { deviceId: { exact: deviceId }, width: { ideal: 1920 }, height: { ideal: 1080 }, frameRate: { ideal: 60, min: 30 } } : 
+            { facingMode: "environment", width: { ideal: 1920 }, height: { ideal: 1080 }, frameRate: { ideal: 60, min: 30 } }
     };
     try {
         const stream = await navigator.mediaDevices.getUserMedia(constraints);
